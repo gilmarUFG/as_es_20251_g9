@@ -22,5 +22,5 @@
 | RQ03 | Segurança | O sistema deve implementar mecanismos de proteção de dados em conformidade com a LGPD. | RF04, RF05 e RF06 |
 | RQ04 | Usabilidade | O sistema deve permitir que o usuário escute informações (texto para voz) e controle a geladeira através de comandos falados (reconhecimento de voz). | RF01, RF03, RF04, RF05 e RF06 |
 | RQ05 | Eficiência | O sistema deve consumir no máximo 1GB de RAM. | RF01, RF02, RF03, RF04, RF05 e RF06 |
-| RQ06 | Usabilidade | O sistema deve apresentar as temperaturas em graus Celsius como unidade de padrão. | RF01, RF02 e RF03 |
+| RQ06 | Usabilidade | O sistema deve apresentar as temperaturas em graus Celsius como unidade padrão. | RF01, RF02 e RF03 |
 | RQ07 | Integrabilidade | O sistema pode se conectar à Internet via WiFi. | RF04, RF05 e RF06 |
