@@ -15,7 +15,7 @@
 
 ### Requisitos de Qualidade
 
-| ID | Categoria | Descrição | Relação com outros requisitos |
+| ID | Categoria | Descrição | Relação com Requisitos Funcionais |
 |:---:|:---|:---|:---|
 | RQ01 | Compatibilidade | O sistema deve ser compatível com smartphones iOS e Android, oferecendo sincronização em tempo real entre a interface da geladeira e o dispositivo móvel. | RF01, RF03, RF04, RF05 e RF06 |
 | RQ02 | Implementação | O sistema deve ser desenvolvido em Rust. | RF01, RF02, RF03, RF04, RF05 e RF06 |
