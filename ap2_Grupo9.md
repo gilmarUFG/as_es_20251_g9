@@ -10,7 +10,7 @@
 | RF02 | O sistema deve ajustar automaticamente as temperaturas internas da geladeira conforme necessário. |
 | RF03 | O usuário deve ser capaz de configurar manualmente as temperaturas desejadas para cada compartimento da geladeira. |
 | RF04 | O sistema deve identificar e catalogar os alimentos armazenados na geladeira. |
-| RF05 | O sistema deve monitorar o estoque de alimentos e notificar o usuário quando identificar quantidades baixas ou egostamento de itens específicos. |
+| RF05 | O sistema deve monitorar o estoque de alimentos e notificar o usuário quando identificar quantidades baixas ou esgotamento de itens específicos. |
 | RF06 | O usuário deve ser capaz de cadastrar, gerenciar e visualizar itens de uma lista de compras. |
 
 ### Requisitos de Qualidade
