@@ -25,5 +25,5 @@
 | RQ06 | Usabilidade | O sistema deve apresentar as temperaturas em graus Celsius como unidade padrão. | RF01, RF02 e RF03 |
 | RQ07 | Integrabilidade | O sistema da geladeira deve se conectar à Internet via WiFi para integração com o aplicativo móvel. | RF04, RF05 e RF06 |
 | RQ08 | Modificabilidade | O sistema deve ser desenvolvido utilizando Orientação a Objetos. | RF01, RF02, RF03, RF04, RF05 e RF06 |
-| RQ09 | Testabilidade | O sistema deve ser testado usando testes unitários para pequenas funcionalidades e testes funcionais para verificar a implementação dos requisitos. | RF01, RF02, RF03, RF04, RF05 e RF06 |
+| RQ09 | Testabilidade | O sistema deve ser desenvolvido utilizando Orientação a Objetos e o padrão SOLID de desenvolvimento. | RF01, RF02, RF03, RF04, RF05 e RF06 |
 | RQ10 | Sustentabilidade | A geladeira deve ter eficiência energética tipo A. | RF01, RF02, RF03, RF04, RF05 e RF06 |
