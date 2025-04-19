@@ -1,4 +1,4 @@
-## Atividade Prática 2 - Grupo 9 - 17/03/2025
+## Atividade Prática 1 - Grupo 9 - 17/03/2025
 
 **Problema escolhido:** Software para uma geladeira inteligente.
 
@@ -27,4 +27,4 @@
 | RQ08 | Modificabilidade | O sistema deve implementar uma arquitetura orientada a objetos com alto grau de coesão e baixo acoplamento entre seus componentes. | RF01, RF02, RF03, RF04, RF05 e RF06 |
 | RQ09 | Testabilidade | O sistema deve ser desenvolvido seguindo os princípios SOLID da orientação a objetos. | RF01, RF02, RF03, RF04, RF05 e RF06 |
 | RQ10 | Sustentabilidade | O sistema da geladeira deve atender aos critérios de eficiência energética classe A conforme a classificação do INMETRO. | RF02, RF03 e RF05 |
-| RQ11 | Implantação | O sistema deve utilizar processamento em nuvem para identificar e catalogar os alimentos armazenados na geladeira. | RF04 | 
+| RQ11 | Implantação | O sistema deve utilizar processamento em nuvem para identificar e catalogar os alimentos armazenados na geladeira. | RF04 |
