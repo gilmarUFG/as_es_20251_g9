@@ -34,7 +34,7 @@ Considerando os requisitos funcionais escolhidos no tópico anterior, foram iden
 | RQ07 | Confiabilidade | O aplicativo deve exibir uma mensagem clara quando ocorrer algum erro, como falha de conexão ou problema ao salvar uma meta. |
 | RQ08 | Usabilidade | O aplicativo deve apresentar uma interface intuitiva que permita ao usuário configurar metas de consumo e lembretes em, no máximo, 3 cliques a partir da tela principal. |
 | RQ09 | Usabilidade | As informações no guia interativo e na seção de práticas sustentáveis devem ser apresentadas em linguagem simples e com elementos visuais intuitivos. |
-| RQ10 | Usabilidade | O aplicativo deve oferecer exemplos de metas de consumo sustentável a fim de facilitar a configuração destas por novos usuários. |
+| RQ10 | Usabilidade | O aplicativo deve oferecer exemplos de metas de consumo sustentável, a fim de facilitar a configuração destas por novos usuários. |
 | RQ11 | Usabilidade | Ao sair de uma tela de configuração sem salvar alterações, o aplicativo deve perguntar se o usuário deseja salvá-las ou descartá-las. |
 | RQ12 | Usabilidade | O aplicativo deve se adaptar automaticamente ao tema escuro do sistema operacional, respeitando a preferência do usuário. |
 | RQ13 | Manutenibilidade | O código-fonte do aplicativo deve seguir padrões de organização que facilitem a adição de novos tipos de ações sustentáveis sem a necessidade de modificar a estrutura principal. |
@@ -48,29 +48,29 @@ Considerando os requisitos funcionais escolhidos no tópico anterior, foram iden
 | RQ21 | Testabilidade | A arquitetura do aplicativo deve ser inerentemente testável em todos os seus níveis (unitário, integração e ponta a ponta). |
 | RQ22 | Escalabilidade | A hospedagem da aplicação em um ambiente de nuvem fornecerá a infraestrutura necessária para escalar os recursos de computação. |
 | RQ23 | Integrabilidade | O aplicativo deverá integrar-se com um sistema de monitoramento para que este possa acompanhar continuamente a disponibilidade e o desempenho de todos os componentes da arquitetura. |
-| RQ24 | Portabilidade | Funcionalidades básicas (como visualização de metas e leitura do guia interativo) devem estar acessíveis mesmo sem conexão, sincronizando dados automaticamente quando o dispositivo voltar a ficar online. |
+| RQ24 | Portabilidade | Funcionalidades básicas (como visualização de metas e leitura do guia interativo) devem estar acessíveis mesmo sem conexão à Internet, sincronizando os dados automaticamente quando o dispositivo voltar a ficar online. |
 | RQ25 | Usabilidade | Novos usuários devem ser capazes de completar a configuração inicial do aplicativo em até 5 minutos, com tutoriais contextuais. |
 
 ## 3. Arquitetura
 
 Com base nos requisitos de qualidade levantados, o padrão arquitetural escolhido para o desenvolvimento do aplicativo foi o **MVC (Model-View-Controller)**. Optou-se por esse padrão por proporcionar uma clara separação de responsabilidades entre a interface do usuário, a lógica de negócios e os dados, facilitando a manutenção e a evolução do sistema. Além disso, ele permite a implementação de uma interface intuitiva e adaptável a múltiplas plataformas, alinhando-se diretamente às necessidades do aplicativo.
 
-Para representar o modelo arquitetural adotado, optamos pelo uso do **Modelo C4**, devido à sua capacidade de apresentar a arquitetura do sistema em múltiplos níveis de abstração de maneira bem simples. Ademais, trata-se de um método visual para descrever e documentar a arquitetura de software, o que possibilita uma comunicação clara e eficaz entre os diferentes stakeholders envolvidos no projeto.
+Para representar o modelo arquitetural adotado, optamos pelo uso do **Modelo C4**, devido à sua capacidade de apresentar a arquitetura do sistema em múltiplos níveis de abstração de uma maneira bem simples. Ademais, trata-se de um método predominantemente visual utilizado para descrever e documentar a arquitetura de softwares, o que possibilita uma comunicação clara e eficaz entre os diferentes stakeholders envolvidos no projeto.
 
-O Modelo C4 estrutura a arquitetura do sistema em quatro níveis: Contexto, Contêiner, Componente e Código. Cada um desses níveis será apresentado com mais detalhes nas subseções seguintes deste documento, por meio de diagramas.
+O Modelo C4 estrutura a arquitetura do sistema em quatro níveis: Contexto, Container, Componente e Código. Cada um desses níveis será apresentado com mais detalhes nas subseções seguintes deste documento, por meio de diagramas.
 
 ### 3.1 Contexto
 
-Traz a aplicação de uma perspectiva macro. Isto é, representa a solução na sua forma mais abstrata possível: o sistema de software. Além disso, mostra os usuários que utilizam esse sistema e outros sistemas de software (externos) já existentes com os quais ele interage. 
+Traz a aplicação de uma perspectiva macro. Isto é, representa a solução na sua forma mais abstrata possível: o **sistema de software**. Além disso, mostra os **usuários** que utilizam esse sistema e **outros sistemas de software (externos) já existentes** com os quais ele interage. 
 
 ### 3.2 Container
 
-Descreve com mais detalhes o sistema de software, mostrando os containers que o compõem e como eles se comunicam entre si. Ou seja, representa uma parte implantável do sistema. As decisões de tecnologia são uma parte fundamental desse diagrama. 
+Descreve com mais detalhes o sistema de software, mostrando os **containers** que o compõem e **como eles se comunicam** entre si. Ou seja, representa uma parte implantável do sistema. As decisões de tecnologia são uma parte fundamental desse diagrama. 
 
 ### 3.3 Componente
 
-Amplia cada container individualmente, apresentando os diversos componentes (partes) dentro dele. Um componente é um agrupamento de código com funcionalidades relacionadas, encapsuladas atrás de uma interface muito bem definida.
+Amplia cada container individualmente, apresentando os diversos **componentes (partes)** dentro dele. Um componente é um **agrupamento de código com funcionalidades relacionadas**, encapsuladas atrás de uma interface muito bem definida.
 
 ### 3.4 Código
 
-Expande um componente individual para mostrar como ele é implementado, refletindo diretamente o código.
+Expande um componente individual para mostrar **como ele é implementado**, refletindo diretamente o código.
