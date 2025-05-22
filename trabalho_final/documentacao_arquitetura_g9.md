@@ -25,11 +25,11 @@ Considerando os requisitos funcionais escolhidos no tópico anterior, foram iden
 
 | ID | Categoria | Requisito |
 |----|-----------|-----------|
-| RQ01 | Compatibilidade | O aplicativo deve ser compatível com smartphones iOS e Android. |
+| RQ01 | Compatibilidade | O aplicativo deve ser compatível com dispositivos iOS e Android. |
 | RQ02 | Segurança | O aplicativo deve implementar mecanismos de proteção de dados em conformidade com a LGPD, especialmente em relação a dados sensíveis como localização e hábitos pessoais. |
 | RQ03 | Segurança | O aplicativo deve solicitar, de forma explícita, apenas as permissões estritamente necessárias para seu funcionamento, garantindo que o usuário compreenda claramente o motivo de cada solicitação antes de acessar dados sensíveis, como a localização. |
 | RQ04 | Eficiência Energética | O consumo de bateria pelo aplicativo deve ser otimizado, especialmente ao utilizar recursos como GPS. |
-| RQ05 | Confiabilidade | O sistema de localização deve oferecer alternativas quando o GPS não estiver disponível, como a busca por CEP ou endereço. |
+| RQ05 | Confiabilidade | O aplicativo deve oferecer alternativas de localização quando o GPS não estiver disponível, como a busca por CEP ou endereço. |
 | RQ06 | Confiabilidade | O aplicativo deve garantir que nenhuma informação do usuário seja perdida ou corrompida durante atualizações do aplicativo. |
 | RQ07 | Confiabilidade | O aplicativo deve exibir uma mensagem clara quando ocorrer algum erro, como falha de conexão ou problema ao salvar uma meta. |
 | RQ08 | Usabilidade | O aplicativo deve apresentar uma interface intuitiva que permita ao usuário configurar metas de consumo e lembretes em, no máximo, 3 cliques a partir da tela principal. |
