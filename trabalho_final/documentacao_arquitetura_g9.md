@@ -9,7 +9,7 @@
 
 ### 2.1 Requisitos Funcionais
 
-Para a 1ª iteração do sistema em questão, foram levantados os seguintes requisitos funcionais:
+Para a 1ª iteração do sistema em questão, foram selecionados os seguintes requisitos funcionais:
 
 | ID | Requisito |
 |----|------------|
@@ -21,31 +21,31 @@ Para a 1ª iteração do sistema em questão, foram levantados os seguintes requ
 
 ### 2.2 Requisitos de Qualidade
 
-Considerando os requisitos funcionais selecionados no tópico anterior, foram identificados os requisitos de qualidade abaixo:
+Considerando os requisitos funcionais escolhidos no tópico anterior, foram identificados os requisitos de qualidade abaixo:
 
 | ID | Categoria | Requisito |
 |----|-----------|-----------|
-| RQ01 | Compatibilidade | O sistema deve ser compatível com smartphones iOS e Android. |
-| RQ02 | Segurança | O sistema deve implementar mecanismos de proteção de dados em conformidade com a LGPD, especialmente em relação a dados sensíveis como localização e hábitos pessoais. |
+| RQ01 | Compatibilidade | O aplicativo deve ser compatível com smartphones iOS e Android. |
+| RQ02 | Segurança | O aplicativo deve implementar mecanismos de proteção de dados em conformidade com a LGPD, especialmente em relação a dados sensíveis como localização e hábitos pessoais. |
 | RQ03 | Segurança | O aplicativo deve solicitar, de forma explícita, apenas as permissões estritamente necessárias para seu funcionamento, garantindo que o usuário compreenda claramente o motivo de cada solicitação antes de acessar dados sensíveis, como a localização. |
 | RQ04 | Eficiência Energética | O consumo de bateria pelo aplicativo deve ser otimizado, especialmente ao utilizar recursos como GPS. |
 | RQ05 | Confiabilidade | O sistema de localização deve oferecer alternativas quando o GPS não estiver disponível, como a busca por CEP ou endereço. |
-| RQ06 | Confiabilidade | O sistema deve garantir que nenhuma informação do usuário seja perdida ou corrompida durante atualizações do aplicativo. |
+| RQ06 | Confiabilidade | O aplicativo deve garantir que nenhuma informação do usuário seja perdida ou corrompida durante atualizações do aplicativo. |
 | RQ07 | Confiabilidade | O aplicativo deve exibir uma mensagem clara quando ocorrer algum erro, como falha de conexão ou problema ao salvar uma meta. |
 | RQ08 | Usabilidade | O aplicativo deve apresentar uma interface intuitiva que permita ao usuário configurar metas de consumo e lembretes em, no máximo, 3 cliques a partir da tela principal. |
 | RQ09 | Usabilidade | As informações no guia interativo e na seção de práticas sustentáveis devem ser apresentadas em linguagem simples e com elementos visuais intuitivos. |
-| RQ10 | Usabilidade | O sistema deve oferecer modelos pré-definidos para a configuração de metas de consumo sustentável, a fim de facilitar o uso por novos usuários. |
-| RQ11 | Usabilidade | Ao sair de uma tela de configuração sem salvar alterações, o sistema deve perguntar se o usuário deseja salvar ou descartar. |
-| RQ12 | Usabilidade | O sistema deve se adaptar automaticamente ao tema escuro do sistema operacional, respeitando a preferência do usuário. |
-| RQ13 | Manutenibilidade | O código-fonte do sistema deve seguir padrões de organização que facilitem a adição de novos tipos de ações sustentáveis sem a necessidade de modificar a estrutura principal. |
-| RQ14 | Integrabilidade | O aplicativo deve fornecer APIs que permitam a integração com sistemas municipais relacionados a pontos de coleta. |
+| RQ10 | Usabilidade | O aplicativo deve oferecer exemplos de metas de consumo sustentável a fim de facilitar a configuração destas por novos usuários. |
+| RQ11 | Usabilidade | Ao sair de uma tela de configuração sem salvar alterações, o aplicativo deve perguntar se o usuário deseja salvá-las ou descartá-las. |
+| RQ12 | Usabilidade | O aplicativo deve se adaptar automaticamente ao tema escuro do sistema operacional, respeitando a preferência do usuário. |
+| RQ13 | Manutenibilidade | O código-fonte do aplicativo deve seguir padrões de organização que facilitem a adição de novos tipos de ações sustentáveis sem a necessidade de modificar a estrutura principal. |
+| RQ14 | Integrabilidade | O aplicativo deve ser capaz de consumir APIs disponibilizadas por sistemas municipais, a fim de obter informações relacionadas a pontos de coleta. |
 | RQ15 | Integrabilidade | O aplicativo deve ser capaz de integrar-se com APIs de mapas, como Google Maps, para fornecer recursos de geolocalização e exibição de pontos de coleta no mapa. |
-| RQ16 | Portabilidade | O sistema deve possuir um design responsivo, adaptando sua interface a diferentes tamanhos de tela. |
+| RQ16 | Portabilidade | O aplicativo deve possuir um design responsivo, adaptando sua interface a diferentes tamanhos de tela. |
 | RQ17 | Acessibilidade | O aplicativo deve ser compatível com leitores de tela como TalkBack (Android) e VoiceOver (iOS), permitindo que os elementos sejam lidos em voz alta. |
 | RQ18 | Acessibilidade | Todas as imagens utilizadas no aplicativo devem ter descrições (alt-text) para que possam ser interpretadas por leitores de tela. |
-| RQ19 | Manutenibilidade | A arquitetura deve ser intrinsecamente modular, com funcionalidades distintas encapsuladas em unidades independentes, de forma a facilitar sua manutenção e teste. |
-| RQ20 | Manutenibilidade | A arquitetura deve ser projetada para facilitar a manutenção corretiva, adaptativa e evolutiva. |
-| RQ21 | Testabilidade | Testabilidade: A arquitetura deve ser inerentemente testável em todos os seus níveis (unitário, integração e ponta a ponta). |
+| RQ19 | Manutenibilidade | A arquitetura do aplicativo deve ser intrinsecamente modular, com funcionalidades distintas encapsuladas em unidades independentes, de forma a facilitar sua manutenção e teste. |
+| RQ20 | Manutenibilidade | A arquitetura do aplicativo deve ser projetada para facilitar a manutenção corretiva, adaptativa e evolutiva. |
+| RQ21 | Testabilidade | A arquitetura do aplicativo deve ser inerentemente testável em todos os seus níveis (unitário, integração e ponta a ponta). |
 | RQ22 | Escalabilidade | A hospedagem da aplicação em um ambiente de nuvem fornecerá a infraestrutura necessária para escalar os recursos de computação. |
 | RQ23 | Integrabilidade | O aplicativo deverá integrar-se com um sistema de monitoramento para que este possa acompanhar continuamente a disponibilidade e o desempenho de todos os componentes da arquitetura. |
 | RQ24 | Portabilidade | Funcionalidades básicas (como visualização de metas e leitura do guia interativo) devem estar acessíveis mesmo sem conexão, sincronizando dados automaticamente quando o dispositivo voltar a ficar online. |
