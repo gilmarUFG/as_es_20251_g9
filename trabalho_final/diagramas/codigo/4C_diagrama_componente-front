@@ -1,0 +1,52 @@
+@startuml
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+LAYOUT_WITH_LEGEND()
+
+title Component Diagram for App Mobile (Front-End)
+
+Container_Boundary(mobile, "Aplicativo Mobile") {
+    
+    Component(homeScreen, "HomeScreen", "React Screen", "Tela principal com navegação e resumo")
+    Component(goalsScreen, "GoalsScreen", "React Screen", "Tela para gerenciar metas de consumo sustentável")
+    Component(remindersScreen, "RemindersScreen", "React Screen", "Tela para configurar lembretes diários")
+    Component(mapScreen, "MapScreen", "React Screen", "Tela para localizar ecopontos e pontos de coleta")
+    Component(guideScreen, "GuideScreen", "React Screen", "Tela com guia de separação de resíduos e dicas")
+    
+    Component(apiService, "ApiService", "HTTP Client", "Responsável pela comunicação com o Backend API")
+    Component(gpsService, "LocationService", "Native Service", "Obtém a localização do dispositivo usando o GPS nativo")
+    Component(notificationService, "NotificationService", "Native Service", "Gerencia o envio de notificações push e lembretes locais, utilizando os recursos do sistema operacional")
+    Component(accessibilityService, "AccessibilityService", "Native Service", "Ajusta a interface para torná-la compatível com leitores de tela")
+    Component(localStorage, "AsyncStorage", "Storage Service", "Responsável por realizar cache local dos dados no dispositivo, possibilitando acesso offline")
+    Component(themeService, "ThemeService", "Native Service", "Detecta e aplica configurações de tema do sistema operacional")
+    Component(stateManager, "State Manager", "State Management", "Gerencia o estado global da aplicação")
+}
+
+Container(backendAPI, "Backend API", "Node.js", "Fornece as lógicas de negócio, acesso a dados e integração com sistemas externos, além de expor notificações e métricas")
+System_Ext(deviceGPS, "Device GPS", "Serviço nativo do sistema operacional que fornece dados de geolocalização por GPS")
+System_Ext(osNotifications, "OS Notifications", "Componente do sistema operacional que entrega notificações visuais e sonoras ao usuário")
+System_Ext(screenReaders, "Screen Readers", "Tecnologias assistivas como TalkBack e VoiceOver que leem o conteúdo da interface em voz alta")
+System_Ext(osThemeSettings, "OS Theme Settings", "Configurações de tema do sistema operacional que definem modo claro/escuro")
+
+Rel(homeScreen, goalsScreen, "navega para")
+Rel(homeScreen, remindersScreen, "navega para")
+Rel(homeScreen, mapScreen, "navega para")
+Rel(homeScreen, guideScreen, "navega para")
+
+Rel(stateManager, apiService, "solicita dados da API")
+Rel(stateManager, localStorage, "persiste estado localmente")
+Rel(themeService, osThemeSettings, "lê configurações de tema")
+Rel(stateManager, themeService, "gerencia tema da aplicação")
+
+Rel(mapScreen, gpsService, "obtém coordenadas geográficas")
+Rel(homeScreen, notificationService, "envia notificações push")
+Rel(remindersScreen, notificationService, "agenda lembretes")
+
+Rel(apiService, backendAPI, "realiza chamadas REST", "HTTPS/JSON")
+Rel(gpsService, deviceGPS, "acessa GPS do dispositivo")
+Rel(notificationService, osNotifications, "envia push ao sistema")
+Rel(accessibilityService, screenReaders, "expõe conteúdo para leitores de tela")
+
+' Nota: Todas as screens utilizam o State Manager e o Accessibility Service
+
+@enduml
