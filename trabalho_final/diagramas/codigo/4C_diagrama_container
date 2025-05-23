@@ -5,35 +5,34 @@ LAYOUT_WITH_LEGEND()
 
 title Container Diagram for Sustainable Habits Application
 
-Person(user, "Usuário", "Pessoa física que utiliza o aplicativo.")
+Person(user, "Usuário", "Pessoa física que utiliza o aplicativo para gerenciar seus hábitos sustentáveis e acessar informações sobre o assunto.")
 
-System_Ext(municipal_systems, "Sistemas Municipais", "Sistemas externos que podem fornecer informações sobre pontos de coleta.")
-System_Ext(map_apis, "APIs de Mapas", "APIs de terceiros (e.g., Google Maps) para geolocalização e exibição de pontos.")
+System_Ext(municipal_systems, "Sistemas Municipais", "Sistemas que podem fornecer informações sobre pontos de coleta em determinado município via API.")
+System_Ext(map_apis, "APIs de Mapas", "APIs de terceiros (e.g., Google Maps) para geolocalização e exibição de pontos de coleta.")
 System_Ext(os_notification_service, "Serviço de Notificação do SO", "Serviço do sistema operacional para exibição de notificações.")
 System_Ext(os_theme_settings, "Configurações de Tema do SO", "Configurações do sistema operacional para o tema (modo claro/escuro).")
-System_Ext(screen_readers, "Leitores de Tela", "Softwares de acessibilidade (e.g., TalkBack, VoiceOver) para leitura de conteúdo.")
+System_Ext(screen_readers, "Leitores de Tela", "Softwares de acessibilidade (e.g., TalkBack, VoiceOver) para leitura de conteúdo em voz alta.")
 System_Ext(prometheus, "Prometheus", "Sistema de monitoramento que coleta métricas da aplicação.")
 System_Ext(grafana, "Grafana", "Ferramenta de visualização para as métricas coletadas pelo Prometheus.")
 
 
 Container_Boundary(c1, "Aplicativo de Hábitos Sustentáveis") {
-    Container(mobile_app, "Aplicativo Mobile", "React Native", "Permite ao usuário interagir com as funcionalidades, configurar metas, lembretes, visualizar guias e localizar pontos.")
-    Container(backend_api, "Backend API", "Node.js", "Fornece a lógica de negócios, gerencia dados de usuários, metas, lembretes, dicas e integração com sistemas externos. Também gerencia e dispara notificações diárias e lembretes para o aplicativo mobile. Expõe métricas para monitoramento.")
-    Container(database, "Banco de Dados", "MongoDB", "Armazena dados do usuário, metas, lembretes, informações de ecopontos e conteúdo do guia.")
+    Container(mobile_app, "Aplicativo Mobile", "React Native", "Permite que o usuário interaja com as funcionalidades da aplicação.")
+    Container(backend_api, "Backend API", "Node.js", "Fornece a lógica de negócios, gerencia todos os dados da aplicação e integra-se com sistemas externos. Também gerencia e dispara notificações diárias e lembretes para o aplicativo mobile. Expõe métricas para monitoramento.")
+    Container(database, "Banco de Dados", "MongoDB", "Armazena dados do usuário, metas, lembretes, informações de ecopontos, conteúdo do guia interativo, etc.")
 }
 
 Rel(user, mobile_app, "Utiliza")
-Rel(mobile_app, backend_api, "Requisita informações", "HTTPS/Json")
-Rel(backend_api, database, "Lê e escreve dados", "Driver Oficial MongoDB / Mongoose")
-Rel(backend_api, municipal_systems, "Integra com", "HTTPS/Json")
-Rel(backend_api, map_apis, "Consulta para informações de localização", "HTTPS/Json")
-Rel(backend_api, os_notification_service, "Envia notificações para o dispositivo", "Firebase Cloud Messaging / APNs")
+Rel(mobile_app, backend_api, "Requisita informações", "HTTPS/JSON")
+Rel(backend_api, database, "Lê e escreve dados", "Driver Oficial MongoDB/Mongoose")
+Rel(backend_api, municipal_systems, "Requisita informações", "HTTPS/JSON")
+Rel(backend_api, map_apis, "Requisita informações", "HTTPS/JSON")
+Rel(backend_api, os_notification_service, "Dispara mensagens push", "Firebase Cloud Messaging/APNs")
 
-Rel(mobile_app, os_notification_service, "Exibe notificações do SO")
-Rel(mobile_app, os_theme_settings, "Lê configurações de tema")
-Rel(mobile_app, screen_readers, "Interage com")
+Rel(mobile_app, os_theme_settings, "Consulta")
+Rel(mobile_app, screen_readers, "Fornece informações acessíveis para")
 
-Rel(prometheus, backend_api, "Coleta métricas via endpoint /metrics", "HTTPS/Json")
-Rel(grafana, prometheus, "Consulta métricas para visualização")
+Rel(prometheus, backend_api, "Coleta métricas via endpoint/metrics", "HTTPS/JSON")
+Rel(grafana, prometheus, "Consulta métricas")
 
 @enduml
