@@ -63,9 +63,13 @@ O Modelo C4 estrutura a arquitetura do sistema em quatro níveis: Contexto, Cont
 
 Traz a aplicação de uma perspectiva macro. Isto é, representa a solução na sua forma mais abstrata possível: o **sistema de software**. Além disso, mostra os **usuários** que utilizam esse sistema e **outros sistemas de software (externos) já existentes** com os quais ele interage. 
 
+![Diagrama de Contexto](diagramas/imagens/4C_diagrama_Contexto.png)
+
 ### 3.2 Container
 
 Descreve com mais detalhes o sistema de software, mostrando os **containers** que o compõem e **como eles se comunicam** entre si. Ou seja, representa uma parte implantável do sistema. As decisões de tecnologia são uma parte fundamental desse diagrama. 
+
+![Diagrama de Container](diagramas/imagens/4C_diagrama_container.png)
 
 ### 3.3 Componente
 
