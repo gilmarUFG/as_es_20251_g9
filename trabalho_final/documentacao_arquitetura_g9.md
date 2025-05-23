@@ -53,7 +53,9 @@ Considerando os requisitos funcionais escolhidos no tópico anterior, foram iden
 
 ## 3. Arquitetura
 
-Com base nos requisitos de qualidade levantados, o padrão arquitetural escolhido para o desenvolvimento do aplicativo foi o **MVC (Model-View-Controller)**. Optou-se por esse padrão por proporcionar uma clara separação de responsabilidades entre a interface do usuário, a lógica de negócios e os dados, facilitando a manutenção e a evolução do sistema. Além disso, ele permite a implementação de uma interface intuitiva e adaptável a múltiplas plataformas, alinhando-se diretamente às necessidades do aplicativo.
+Com base nos requisitos de qualidade levantados, o estilo arquitetural escolhido para o desenvolvimento do aplicativo foi a **Arquitetura em Camadas**. Essa abordagem divide a aplicação em níveis bem definidos: apresentação, regras de negócios e persistência de dados, promovendo uma estrutura modular, de fácil manutenção e com forte separação de responsabilidades. Essa organização facilita a escalabilidade do sistema, a reutilização de componentes e o isolamento de mudanças entre camadas.
+
+Dentro desse estilo, optou-se pelo padrão arquitetural **MVC (Model-View-Controller)**, por oferecer uma separação explícita entre os componentes de apresentação (View), controle (Controller) e dados (Model). Essa combinação permite uma fácil evolução do sistema, torna a interface mais adaptável a diferentes plataformas e se alinha diretamente às necessidades do aplicativo.
 
 Para representar o modelo arquitetural adotado, optamos pelo uso do **Modelo C4**, devido à sua capacidade de apresentar a arquitetura do sistema em múltiplos níveis de abstração de uma maneira bem simples. Ademais, trata-se de um método predominantemente visual utilizado para descrever e documentar a arquitetura de softwares, o que possibilita uma comunicação clara e eficaz entre os diferentes stakeholders envolvidos no projeto.
 
