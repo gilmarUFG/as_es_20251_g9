@@ -75,6 +75,12 @@ Descreve com mais detalhes o sistema de software, mostrando os **containers** qu
 
 Amplia cada container individualmente, apresentando os diversos **componentes (partes)** dentro dele. Um componente é um **agrupamento de código com funcionalidades relacionadas**, encapsuladas atrás de uma interface muito bem definida.
 
+### Front-End
+
+![Diagrama de Componente do Front-End](diagramas/imagens/4C_diagrama_componente-front.png)
+
+> Observação: Todas as screens (telas do aplicativo) utilizam o **State Manager** para acessar e atualizar o estado global da aplicação, bem como o **Accessibility Service** para garantir conformidade com práticas de acessibilidade. Para manter o diagrama visualmente limpo e legível, esses relacionamentos não foram representados individualmente entre cada tela e esses serviços, evitando a sobrecarga de setas e conexões redundantes. 
+
 ### 3.4 Código
 
 Expande um componente individual para mostrar **como ele é implementado**, refletindo diretamente o código.
