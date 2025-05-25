@@ -13,9 +13,9 @@ LAYOUT_WITH_LEGEND()
 title Component Diagram for App Mobile (Back-End)
 
 
-Component(mobile, "Aplicativo móvel", "Container: React Native", "")
+Container(mobile, "Aplicativo Mobile", "Container: React Native", "")
 
-Container_Boundary(backend, "Node.JS"){
+Container_Boundary(backend, "Backend API"){
     Component(userController, "UserController", "MVC REST controller", "Rotas relacionadas ao usuário")
     Component(goalsController, "GoalsController", "MVC REST controller", "Rotas relacionadas às metas do usuário")
     Component(notificationController, "NotificationController", "MVC REST controller", "Rotas relacionadas às notificações")
@@ -34,7 +34,7 @@ Container_Boundary(backend, "Node.JS"){
 
 System_Ext(pns, "Sistema de envio de notificações", "FCM ou APNs")
 
-ComponentDb(db, "Banco de dados", "MongoDB", "Armazena as coleções de dados necessárias para o sistema", $sprite="mongodb")
+ContainerDb(db, "Banco de dados", "MongoDB", "Armazena as coleções de dados necessárias para o sistema", $sprite="mongodb")
 
 Rel(mobile, userController, "Realiza chamadas a", "JSON/HTTPS")
 Rel(mobile, goalsController, "Realiza chamadas a", "JSON/HTTPS")

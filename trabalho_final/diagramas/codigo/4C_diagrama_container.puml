@@ -1,4 +1,5 @@
-@startuml
+@startuml container
+
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 LAYOUT_WITH_LEGEND()
@@ -19,7 +20,7 @@ System_Ext(grafana, "Grafana", "Ferramenta de visualização para as métricas c
 Container_Boundary(c1, "Aplicativo de Hábitos Sustentáveis") {
     Container(mobile_app, "Aplicativo Mobile", "React Native", "Permite que o usuário interaja com as funcionalidades da aplicação.")
     Container(backend_api, "Backend API", "Node.js", "Fornece a lógica de negócios, gerencia todos os dados da aplicação e integra-se com sistemas externos. Também gerencia e dispara notificações diárias e lembretes para o aplicativo mobile. Expõe métricas para monitoramento.")
-    Container(database, "Banco de Dados", "MongoDB", "Armazena dados do usuário, metas, lembretes, informações de ecopontos, conteúdo do guia interativo, etc.")
+    ContainerDb(database, "Banco de Dados", "MongoDB", "Armazena dados do usuário, metas, lembretes, informações de ecopontos, conteúdo do guia interativo, etc.")
 }
 
 Rel(user, mobile_app, "Utiliza")

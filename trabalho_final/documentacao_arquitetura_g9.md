@@ -65,13 +65,13 @@ O Modelo C4 estrutura a arquitetura do sistema em quatro níveis: Contexto, Cont
 
 Traz a aplicação de uma perspectiva macro. Isto é, representa a solução na sua forma mais abstrata possível: o **sistema de software**. Além disso, mostra os **usuários** que utilizam esse sistema e **outros sistemas de software (externos) já existentes** com os quais ele interage. 
 
-![Diagrama de Contexto](diagramas/imagens/4C_diagrama_Contexto.png)
+![Diagrama de Contexto](diagramas/imagens/context.png)
 
 ### 3.2 Container
 
 Descreve com mais detalhes o sistema de software, mostrando os **containers** que o compõem e **como eles se comunicam** entre si. Ou seja, representa uma parte implantável do sistema. As decisões de tecnologia são uma parte fundamental desse diagrama. 
 
-![Diagrama de Container](diagramas/imagens/4C_diagrama_container.png)
+![Diagrama de Container](diagramas/imagens/container.png)
 
 ### 3.3 Componente
 
@@ -79,9 +79,13 @@ Amplia cada container individualmente, apresentando os diversos **componentes (p
 
 ### Front-End
 
-![Diagrama de Componente do Front-End](diagramas/imagens/4C_diagrama_componente-front.png)
+![Diagrama de Componentes do Front-End](diagramas/imagens/frontend_components.png)
 
 > Observação: Todas as screens (telas do aplicativo) utilizam o **State Manager** para acessar e atualizar o estado global da aplicação, bem como o **Accessibility Service** para garantir conformidade com práticas de acessibilidade. Para manter o diagrama visualmente limpo e legível, esses relacionamentos não foram representados individualmente entre cada tela e esses serviços, evitando a sobrecarga de setas e conexões redundantes. 
+
+### Back-End
+
+![Diagrama de Componentes do Back-End](diagramas/imagens/backend_components.png)
 
 ### 3.4 Código
 
