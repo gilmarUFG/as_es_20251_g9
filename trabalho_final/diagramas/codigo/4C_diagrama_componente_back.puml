@@ -1,0 +1,68 @@
+@startuml backend_components
+
+!theme C4_blue from https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/themes
+
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+!define DEVICONS https://raw.githubusercontent.com/tupadr3/plantuml-icon-font-sprites/master/devicons
+!include DEVICONS/mongodb.puml
+
+
+LAYOUT_WITH_LEGEND()
+
+title Component Diagram for App Mobile (Back-End)
+
+
+Component(mobile, "Aplicativo móvel", "Container: React Native", "")
+
+Container_Boundary(backend, "Node.JS"){
+    Component(userController, "UserController", "MVC REST controller", "Rotas relacionadas ao usuário")
+    Component(goalsController, "GoalsController", "MVC REST controller", "Rotas relacionadas às metas do usuário")
+    Component(notificationController, "NotificationController", "MVC REST controller", "Rotas relacionadas às notificações")
+    Component(locationsController, "LocationsController", "MVC REST controller", "Rotas relacionadas à localização de ecopontos")
+
+    Component(userService, "UserComponent", "Application service", "Registrar e retornar dados do(s) usuário(s)")
+    Component(goalsService, "GoalsComponent", "Application service", "Registrar e ler dados de metas definidas pelo usuário")
+    Component(notificationService, "NotificationComponent", "Application service", "Registrar token do aparelho e realizar chamadas ao PNS")
+    Component(locationsService, "LocationsComponent", "Application service", "Buscar dados de localizações de ecopontos")
+
+/'  Component(userRepository, "UserRepository", "Opera sobre a coleção de usuários", "")
+    Component(goalsRepository, "GoalsRepository", "Opera sobre a coleção de metas", "")
+    Component(notificationRepository, "NotificationRepository", "Opera sobre a coleção de notificações", "")
+    Component(locationsRepository, "LocationsRepository", "Opera sobre a coleção de localizações", "") '/
+}
+
+System_Ext(pns, "Sistema de envio de notificações", "FCM ou APNs")
+
+ComponentDb(db, "Banco de dados", "MongoDB", "Armazena as coleções de dados necessárias para o sistema", $sprite="mongodb")
+
+Rel(mobile, userController, "Realiza chamadas a", "JSON/HTTPS")
+Rel(mobile, goalsController, "Realiza chamadas a", "JSON/HTTPS")
+Rel(mobile, notificationController, "Realiza chamadas a", "JSON/HTTPS")
+Rel(mobile, locationsController, "Realiza chamadas a", "JSON/HTTPS")
+
+Rel(userController, userService, "Consome")
+Rel(goalsController, goalsService, "Consome")
+Rel(notificationController, notificationService, "Consome")
+Rel(locationsController, locationsService, "Consome")
+
+/' Rel(userService, userRepository, "Consome")
+Rel(goalsService, goalsRepository, "Consome")
+Rel(notificationService, notificationRepository, "Consome")
+Rel(locationsService, locationsRepository, "Consome")
+
+Rel(userRepository, db, "Usa")
+Rel(goalsRepository, db, "Usa")
+Rel(notificationRepository, db, "Usa")
+Rel(locationsRepository, db, "Usa") '/
+
+
+Rel(userService, db, "Lê e escreve dados", "Driver MongoDB")
+Rel(goalsService, db, "Lê e escreve dados", "Driver MongoDB")
+Rel(notificationService, db, "Lê e escreve dados", "Driver MongoDB")
+Rel(locationsService, db, "Lê e escreve dados", "Driver MongoDB")
+
+Rel(notificationService, pns, "Envia requisições a")
+Rel(pns, mobile, "envia notificações")
+
+@enduml
