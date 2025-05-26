@@ -53,7 +53,7 @@ Todas as Screens utilizam o StateManager para acessar e atualizar o estado globa
 end note 
 
 note right of accessibilityService
-Todas as Screen utilizam o AcessibilityService para garantir conformidade com práticas de acessibilidade
+Todas as Screens utilizam o AcessibilityService para garantir conformidade com práticas de acessibilidade
 end note
 
 @enduml
