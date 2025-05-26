@@ -87,6 +87,8 @@ Amplia cada container individualmente, apresentando os diversos **componentes (p
 
 ![Diagrama de Componentes do Back-End](diagramas/imagens/backend_components.png)
 
+![Diagrama de Pacotes do Back-End](diagramas/imagens/backend_package.png)
+
 ### 3.4 Código
 
 Expande um componente individual para mostrar **como ele é implementado**, refletindo diretamente o código.
