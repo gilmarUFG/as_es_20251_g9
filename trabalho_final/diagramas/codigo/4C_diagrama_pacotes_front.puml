@@ -1,0 +1,56 @@
+@startuml frontend_package_diagram
+!theme C4_blue from https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/themes
+!include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
+
+LAYOUT_WITH_LEGEND()
+
+title Package Diagram for App Mobile (Front-End)
+
+Container_Boundary(frontend, "Aplicativo Mobile") {
+
+  package "Screens" {
+    Component(homeScreen, "HomeScreen", "React Screen", "Tela principal com navegação e resumo do app")
+    Component(goalsScreen, "GoalsScreen", "React Screen", "Tela para gerenciar metas sustentáveis")
+    Component(remindersScreen, "RemindersScreen", "React Screen", "Tela para configurar lembretes diários")
+    Component(mapScreen, "MapScreen", "React Screen", "Tela para localização de ecopontos")
+    Component(guideScreen, "GuideScreen", "React Screen", "Tela com guia interativo de resíduos e dicas")
+  }
+
+  package "Native Services" {
+    Component(themeService, "ThemeService", "Native Service", "Detecta e aplica o tema do SO (claro/escuro)")
+    Component(gpsService, "LocationService", "Native Service", "Obtém a localização do dispositivo via GPS")
+    Component(notificationService, "NotificationService", "Native Service", "Gerencia envio de notificações locais/push")
+    Component(localStorage, "AsyncStorage", "Storage Service", "Cache local para dados offline")
+    Component(accessibilityService, "AccessibilityService", "Native Service", "Suporte à acessibilidade (TalkBack, VoiceOver)")
+  }
+
+  package "State Management" {
+    Component(stateManager, "StateManager", "State Management", "Gerencia estado global do app (metas, lembretes, configs)")
+  }
+
+  package "Integrations" {
+    Component(apiService, "ApiService", "HTTP Client", "Responsável por chamadas REST ao Backend API")
+  }
+}
+
+homeScreen --> notificationService : usa
+remindersScreen --> notificationService : usa
+mapScreen --> gpsService : usa
+
+
+stateManager --> apiService : "usa"
+stateManager --> themeService : "usa"
+stateManager --> localStorage : "usa"
+
+note right of stateManager
+    Todas as Screens acessam o StateManager
+  para leitura e atualização do estado.
+end note
+
+note right of accessibilityService
+    Todas as Screens acessam o accessibilityService
+  para recursos de acessibilidade como TalkBack e VoiceOver.
+end note
+
+
+@enduml
