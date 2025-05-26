@@ -55,4 +55,4 @@ locationsRepo --> db : "Driver MongoDB"
 
 notificationService --> pns : "envia push"
 
-@endum
+@enduml

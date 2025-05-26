@@ -77,18 +77,23 @@ Descreve com mais detalhes o sistema de software, mostrando os **containers** qu
 
 Amplia cada container individualmente, apresentando os diversos **componentes (partes)** dentro dele. Um componente é um **agrupamento de código com funcionalidades relacionadas**, encapsuladas atrás de uma interface muito bem definida.
 
-### Front-End
+### Container: Front-End
 
 ![Diagrama de Componentes do Front-End](diagramas/imagens/frontend_components.png)
 
-> Observação: Todas as screens (telas do aplicativo) utilizam o **State Manager** para acessar e atualizar o estado global da aplicação, bem como o **Accessibility Service** para garantir conformidade com práticas de acessibilidade. Para manter o diagrama visualmente limpo e legível, esses relacionamentos não foram representados individualmente entre cada tela e esses serviços, evitando a sobrecarga de setas e conexões redundantes. 
-
-### Back-End
+### Container: Back-End
 
 ![Diagrama de Componentes do Back-End](diagramas/imagens/backend_components.png)
 
-![Diagrama de Pacotes do Back-End](diagramas/imagens/backend_package.png)
 
 ### 3.4 Código
 
-Expande um componente individual para mostrar **como ele é implementado**, refletindo diretamente o código.
+Expande um componente individual para mostrar **como ele é implementado**, refletindo diretamente o código. Tradicionalmente, esse nível é representado por diagramas de classes UML, que detalham atributos, métodos e relações entre classes. No entanto, optamos por utilizar **diagramas de pacotes** neste nível, pois eles permitem visualizar de forma mais clara a organização modular do código-fonte, destacando os principais diretórios e suas responsabilidades. Essa escolha também se justifica pelo fato de que muitas IDEs modernas já geram automaticamente diagramas de classes, tornando sua inclusão na documentação redundante para fins de entendimento estrutural.
+
+### Pacotes: Front-End
+
+[Insira aqui a imagem do diagrama de pacotes do Front-End]
+
+### Pacotes: Back-End
+
+![Diagrama de Pacotes do Back-End](diagramas/imagens/backend_package.png)

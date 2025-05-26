@@ -20,7 +20,7 @@ Container_Boundary(mobile, "Aplicativo Mobile") {
     Component(accessibilityService, "AccessibilityService", "Native Service", "Ajusta a interface para torná-la compatível com leitores de tela")
     Component(localStorage, "AsyncStorage", "Storage Service", "Responsável por realizar cache local dos dados no dispositivo, possibilitando acesso offline")
     Component(themeService, "ThemeService", "Native Service", "Detecta e aplica configurações de tema do sistema operacional")
-    Component(stateManager, "State Manager", "State Management", "Gerencia o estado global da aplicação")
+    Component(stateManager, "StateManager", "State Management", "Gerencia o estado global da aplicação")
 }
 
 Container(backendAPI, "Backend API", "Node.js", "Fornece as lógicas de negócio, acesso a dados e integração com sistemas externos, além de expor notificações e métricas")
@@ -48,6 +48,12 @@ Rel(gpsService, deviceGPS, "acessa GPS do dispositivo")
 Rel(notificationService, osNotifications, "envia push ao sistema")
 Rel(accessibilityService, screenReaders, "expõe conteúdo para leitores de tela")
 
-' Nota: Todas as screens utilizam o State Manager e o Accessibility Service
+note top of stateManager
+Todas as Screens utilizam o StateManager para acessar e atualizar o estado global da aplicação
+end note 
+
+note right of accessibilityService
+Todas as Screen utilizam o AcessibilityService para garantir conformidade com práticas de acessibilidade
+end note
 
 @enduml
