@@ -1,4 +1,4 @@
-@startuml backend_package_diagram
+@startuml backend_package
 !theme C4_blue from https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/themes
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 LAYOUT_WITH_LEGEND()
@@ -30,9 +30,11 @@ Container_Boundary(backend, "Backend API") {
     Component(locationModel, "Location", "Domain entity", "Ecoponto")
   }
   package "Config & External" {
+    System_Ext(pns, "PNS (FCM/APNs)", "Sistema de push")
+    System_Ext(municipalSystems, "APIs de Sistemas Municipais", "Informações sobre ecopontos")
+    System_Ext(mapApis, "APIs de Mapas", "Exibição e localização de pontos de coleta")
     Component(dbConfig, "DatabaseConfig", "Config & util", "Conexão MongoDB")
     Component(msgConfig, "MessagingConfig", "Config & util", "FCM / APNs")
-    System_Ext(pns, "PNS (FCM/APNs)", "Sistema de push")
   }
 }
 
@@ -54,5 +56,7 @@ notificationRepo --> db : "Driver MongoDB"
 locationsRepo --> db : "Driver MongoDB"
 
 notificationService --> pns : "envia push"
+locationsService --> municipalSystems : "consulta dados sobre ecopontos"
+locationsService --> mapApis : "consulta coordenadas geográficas"
 
 @enduml
