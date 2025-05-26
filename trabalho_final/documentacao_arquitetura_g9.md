@@ -92,7 +92,7 @@ Expande um componente individual para mostrar **como ele é implementado**, refl
 
 ### Pacotes: Front-End
 
-[Insira aqui a imagem do diagrama de pacotes do Front-End]
+![Diagrama de Pacotes do Front-End](diagramas/imagens/frontend_package.png)
 
 ### Pacotes: Back-End
 
