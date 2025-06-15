@@ -1,4 +1,5 @@
-@startuml
+@startuml context
+
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 LAYOUT_WITH_LEGEND()
@@ -7,15 +8,15 @@ title System Context Diagram for Sustainable Habits Application
 
 Person(user, "Usuário", "Pessoa física que utiliza o aplicativo para gerenciar seus hábitos sustentáveis e acessar informações.")
 
-System(sustainable_app, "Aplicativo de Hábitos Sustentáveis", "Aplicativo móvel que ajuda os usuários a adotar práticas sustentáveis, gamificação, fórum e ranking.")
+System(sustainable_app, "Aplicativo de Hábitos Sustentáveis", "Aplicativo móvel que ajuda os usuários a adotarem práticas sustentáveis.")
 
-System_Ext(municipal_systems, "Sistemas Municipais", "Sistemas externos que podem fornecer informações sobre pontos de coleta.")
-System_Ext(map_apis, "APIs de Mapas", "APIs de terceiros (e.g., Google Maps) para geolocalização e exibição de pontos.")
+System_Ext(municipal_systems, "Sistemas Municipais", "Sistemas externos que podem fornecer informações sobre pontos de coleta em determinado município.")
+System_Ext(map_apis, "APIs de Mapas", "APIs de terceiros (e.g., Google Maps) para geolocalização e exibição de pontos de coleta.")
 System_Ext(os_notification_service, "Serviço de Notificação do SO", "Serviço do sistema operacional para exibição de notificações.")
 System_Ext(os_theme_settings, "Configurações de Tema do SO", "Configurações do sistema operacional para o tema (modo claro/escuro).")
 System_Ext(screen_readers, "Leitores de Tela", "Softwares de acessibilidade (e.g., TalkBack, VoiceOver) para leitura de conteúdo.")
-System_Ext(monitoring_system, "Sistema de Monitoramento (Prometheus/Grafana)", "Sistema externo para acompanhar a disponibilidade e desempenho da aplicação.")
-System_Ext(ecommerce_platforms, "Plataformas de E-commerce de Produtos Sustentáveis (Amazon/Mercado Livre)", "Sistemas externos que vendem produtos sustentáveis.")
+System_Ext(monitoring_system, "Sistema de Monitoramento (Prometheus + Grafana)", "Sistema externo para acompanhar a disponibilidade e desempenho da aplicação.")
+System_Ext(ecommerce_platforms, "Plataformas de e-commerce de Produtos Sustentáveis", "Sistemas externos que vendem produtos sustentáveis, como Amazon e Mercado Livre.")
 
 Rel(user, sustainable_app, "Define metas de consumo sustentável e acompanha progresso", "RF08")
 Rel(user, sustainable_app, "Configura lembretes diários para hábitos sustentáveis", "RF10")
@@ -30,12 +31,12 @@ Rel(user, sustainable_app, "Registra práticas e visualiza impacto ambiental", "
 Rel(user, sustainable_app, "Acessa produtos sustentáveis", "RF06")
 
 
-Rel(sustainable_app, municipal_systems, "Integra com", "Integrabilidade")
-Rel(sustainable_app, map_apis, "Utiliza para geolocalização e exibição de pontos", "Integrabilidade")
+Rel(sustainable_app, municipal_systems, "Integra-se com", "Integrabilidade")
+Rel(sustainable_app, map_apis, "Consome dados de", "Integrabilidade")
 Rel(sustainable_app, os_notification_service, "Envia notificações para o usuário", "RF02, RF10, Usabilidade")
-Rel(sustainable_app, os_theme_settings, "Adapta-se automaticamente ao tema escuro", "Usabilidade")
-Rel(sustainable_app, screen_readers, "Compatível com para acessibilidade", "Acessibilidade")
+Rel(sustainable_app, os_theme_settings, "Adapta-se automaticamente ao tema do dispositivo", "Usabilidade")
+Rel(sustainable_app, screen_readers, "Compatível com", "Acessibilidade")
 Rel(monitoring_system, sustainable_app, "Coleta métricas de disponibilidade e desempenho", "Disponibilidade")
-Rel(sustainable_app, ecommerce_platforms, "Integra com para exibir produtos", "RF06, Integrabilidade")
+Rel(sustainable_app, ecommerce_platforms, "Integra-se com para exibir produtos", "RF06, Integrabilidade")
 
 @enduml
