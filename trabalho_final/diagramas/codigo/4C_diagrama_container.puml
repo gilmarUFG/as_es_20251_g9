@@ -1,39 +1,43 @@
-@startuml container
-
+@startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Container.puml
 
 LAYOUT_WITH_LEGEND()
 
 title Container Diagram for Sustainable Habits Application
 
-Person(user, "Usuário", "Pessoa física que utiliza o aplicativo para gerenciar seus hábitos sustentáveis e acessar informações sobre o assunto.")
+Person(user, "Usuário", "Pessoa física que utiliza o aplicativo.")
 
-System_Ext(municipal_systems, "Sistemas Municipais", "Sistemas que podem fornecer informações sobre pontos de coleta em determinado município via API.")
-System_Ext(map_apis, "APIs de Mapas", "APIs de terceiros (e.g., Google Maps) para geolocalização e exibição de pontos de coleta.")
+System_Ext(municipal_systems, "Sistemas Municipais", "Sistemas externos que podem fornecer informações sobre pontos de coleta.")
+System_Ext(map_apis, "APIs de Mapas", "APIs de terceiros (e.g., Google Maps) para geolocalização e exibição de pontos.")
 System_Ext(os_notification_service, "Serviço de Notificação do SO", "Serviço do sistema operacional para exibição de notificações.")
 System_Ext(os_theme_settings, "Configurações de Tema do SO", "Configurações do sistema operacional para o tema (modo claro/escuro).")
-System_Ext(screen_readers, "Leitores de Tela", "Softwares de acessibilidade (e.g., TalkBack, VoiceOver) para leitura de conteúdo em voz alta.")
+System_Ext(screen_readers, "Leitores de Tela", "Softwares de acessibilidade (e.g., TalkBack, VoiceOver) para leitura de conteúdo.")
 System_Ext(prometheus, "Prometheus", "Sistema de monitoramento que coleta métricas da aplicação.")
 System_Ext(grafana, "Grafana", "Ferramenta de visualização para as métricas coletadas pelo Prometheus.")
+System_Ext(ecommerce_platforms, "Plataformas de E-commerce de Produtos Sustentáveis", "Sistemas externos que vendem produtos sustentáveis.")
 
 
 Container_Boundary(c1, "Aplicativo de Hábitos Sustentáveis") {
-    Container(mobile_app, "Aplicativo Mobile", "React Native", "Permite que o usuário interaja com as funcionalidades da aplicação.")
-    Container(backend_api, "Backend API", "Node.js", "Fornece a lógica de negócios, gerencia todos os dados da aplicação e integra-se com sistemas externos. Também gerencia e dispara notificações diárias e lembretes para o aplicativo mobile. Expõe métricas para monitoramento.")
-    ContainerDb(database, "Banco de Dados", "MongoDB", "Armazena dados do usuário, metas, lembretes, informações de ecopontos, conteúdo do guia interativo, etc.")
+    Container(mobile_app, "Aplicativo Mobile", "React Native", "Permite ao usuário interagir com as funcionalidades, configurar metas e lembretes, visualizar guias, localizar pontos, participar do fórum, visualizar ranking, registrar práticas e acompanhar gamificação. Exibe feedback visual e sonoro, indicadores de progresso e impacto.")
+    
+    Container(backend_api, "Backend API", "Node.js", "Fornece a lógica de negócios, gerencia dados de usuários, metas, lembretes, dicas, informações de fórum, ranking, gamificação (pontos, recompensas, conquistas, desafios, streaks) e impacto ambiental.  Realiza integração com sistemas externos (municipais, mapas, e-commerce) e gerencia notificações. Implementa moderação de conteúdo para o fórum e atualiza o ranking. Expõe métricas para monitoramento. Servidor hospedado na nuveem, Google Cloud")
+    
+    ContainerDb(database, "Banco de Dados", "MongoDB", "Armazena dados do usuário, metas, lembretes, informações de ecopontos e conteúdo do guia.  Armazena também dados de fórum (posts, respostas), ranking, gamificação (pontos, recompensas, conquistas, desafios, streaks) e registro de impacto ambiental. Servidor hospedado na nuvem, Google Cloud")
 }
 
 Rel(user, mobile_app, "Utiliza")
 Rel(mobile_app, backend_api, "Requisita informações", "HTTPS/JSON")
-Rel(backend_api, database, "Lê e escreve dados", "Driver Oficial MongoDB/Mongoose")
-Rel(backend_api, municipal_systems, "Requisita informações", "HTTPS/JSON")
-Rel(backend_api, map_apis, "Requisita informações", "HTTPS/JSON")
-Rel(backend_api, os_notification_service, "Dispara mensagens push", "Firebase Cloud Messaging/APNs")
+Rel(backend_api, database, "Lê e escreve dados", "Driver Oficial MongoDB / Mongoose")
+Rel(backend_api, municipal_systems, "Integra com", "HTTPS/JSON")
+Rel(backend_api, map_apis, "Consulta para informações de localização", "HTTPS/JSON")
+Rel(backend_api, os_notification_service, "Envia notificações para o dispositivo", "Firebase Cloud Messaging / APNs")
+Rel(backend_api, ecommerce_platforms, "Integra com APIs de e-commerce", "HTTPS/JSON, RESTful, Autenticação Segura")
 
-Rel(mobile_app, os_theme_settings, "Consulta")
-Rel(mobile_app, screen_readers, "Fornece informações acessíveis para")
+Rel(mobile_app, os_notification_service, "Exibe notificações do SO")
+Rel(mobile_app, os_theme_settings, "Lê configurações de tema")
+Rel(mobile_app, screen_readers, "Interage com")
 
-Rel(prometheus, backend_api, "Coleta métricas via endpoint/metrics", "HTTPS/JSON")
-Rel(grafana, prometheus, "Consulta métricas")
+Rel(prometheus, backend_api, "Coleta métricas via endpoint /metrics", "HTTPS/JSON")
+Rel(grafana, prometheus, "Consulta métricas para visualização")
 
 @enduml
