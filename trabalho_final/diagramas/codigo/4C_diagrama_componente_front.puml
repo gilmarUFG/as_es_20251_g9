@@ -9,11 +9,15 @@ title Component Diagram for App Mobile (Front-End)
 Container_Boundary(mobile, "Aplicativo Mobile") {
     
     Component(homeScreen, "HomeScreen", "React Screen", "Tela principal com navegação e resumo")
-    Component(goalsScreen, "GoalsScreen", "React Screen", "Tela para gerenciar metas de consumo sustentável")
-    Component(remindersScreen, "RemindersScreen", "React Screen", "Tela para configurar lembretes diários")
+    Component(practiceScreen, "SustainablePracticeScreen", "React Screen", "Tela para gerenciamento de metas de consumo e registro de atividades sustentáveis")
+    Component(remindersScreen, "ReminderScreen", "React Screen", "Tela para configurar lembretes diários")
     Component(mapScreen, "MapScreen", "React Screen", "Tela para localizar ecopontos e pontos de coleta")
-    Component(guideScreen, "GuideScreen", "React Screen", "Tela com guia de separação de resíduos e dicas")
-    
+    Component(guideScreen, "GuideScreen", "React Screen", "Tela com guia de separação de resíduos e seção de dicas")
+    Component(forumScreen, "ForumScreen", "React Screen", "Tela para acessar o fórum comunitário")
+    Component(gamificationScreen, "GamificationScreen", "React Screen", "Tela da central de gamificação da aplicação")
+    Component(rankingScreen, "RankingScreen", "React Screen", "Tela para visualização do ranking de desempenho sustentável")
+    Component(ecommerceScreen, "EcommerceScreen", "React Screen", "Tela para listagem de produtos sustentáveis e redirecionamento para compras")
+
     Component(apiService, "ApiService", "HTTP Client", "Responsável pela comunicação com o Backend API")
     Component(gpsService, "LocationService", "Native Service", "Obtém a localização do dispositivo usando o GPS nativo")
     Component(notificationService, "NotificationService", "Native Service", "Gerencia o envio de notificações push e lembretes locais, utilizando os recursos do sistema operacional")
@@ -29,10 +33,14 @@ System_Ext(osNotifications, "OS Notifications", "Componente do sistema operacion
 System_Ext(screenReaders, "Screen Readers", "Tecnologias assistivas como TalkBack e VoiceOver que leem o conteúdo da interface em voz alta")
 System_Ext(osThemeSettings, "OS Theme Settings", "Configurações de tema do sistema operacional que definem modo claro/escuro")
 
-Rel(homeScreen, goalsScreen, "navega para")
+Rel(homeScreen, practiceScreen, "navega para")
 Rel(homeScreen, remindersScreen, "navega para")
 Rel(homeScreen, mapScreen, "navega para")
 Rel(homeScreen, guideScreen, "navega para")
+Rel(homeScreen, forumScreen, "navega para")
+Rel(homeScreen, gamificationScreen, "navega para")
+Rel(gamificationScreen, rankingScreen, "navega para")
+Rel(homeScreen, ecommerceScreen, "navega para")
 
 Rel(stateManager, apiService, "solicita dados da API")
 Rel(stateManager, localStorage, "persiste estado localmente")
@@ -40,6 +48,8 @@ Rel(themeService, osThemeSettings, "lê configurações de tema")
 Rel(stateManager, themeService, "gerencia tema da aplicação")
 
 Rel(mapScreen, gpsService, "obtém coordenadas geográficas")
+Rel(rankingScreen, gpsService, "obtém coordenadas geográficas para filtragem do ranking")
+Rel(guideScreen, gpsService, "obtém coordenadas geográficas para mostrar informações adaptadas à localidade do usuário")
 Rel(homeScreen, notificationService, "envia notificações push")
 Rel(remindersScreen, notificationService, "agenda lembretes")
 

@@ -10,10 +10,14 @@ Container_Boundary(frontend, "Aplicativo Mobile") {
 
   package "Screens" {
     Component(homeScreen, "HomeScreen", "React Screen", "Tela principal com navegação e resumo do app")
-    Component(goalsScreen, "GoalsScreen", "React Screen", "Tela para gerenciar metas sustentáveis")
-    Component(remindersScreen, "RemindersScreen", "React Screen", "Tela para configurar lembretes diários")
+    Component(practiceScreen, "SustainablePracticeScreen", "React Screen", "Tela para metas de consumo e atividades sustentáveis")
+    Component(remindersScreen, "ReminderScreen", "React Screen", "Tela para configurar lembretes diários")
     Component(mapScreen, "MapScreen", "React Screen", "Tela para localização de ecopontos")
-    Component(guideScreen, "GuideScreen", "React Screen", "Tela com guia interativo de resíduos e dicas")
+    Component(guideScreen, "GuideScreen", "React Screen", "Tela com guia de separação de resíduos e seção de dicas")
+    Component(forumScreen, "ForumScreen", "React Screen", "Tela para acessar o fórum comunitário")
+    Component(gamificationScreen, "GamificationScreen", "React Screen", "Tela da central de gamificação da aplicação")
+    Component(rankingScreen, "RankingScreen", "React Screen", "Tela para visualização do ranking de desempenho sustentável")
+    Component(ecommerceScreen, "EcommerceScreen", "React Screen", "Tela para listagem de produtos sustentáveis e redirecionamento para compras")
   }
 
   package "Native Services" {
@@ -36,6 +40,8 @@ Container_Boundary(frontend, "Aplicativo Mobile") {
 homeScreen --> notificationService : usa
 remindersScreen --> notificationService : usa
 mapScreen --> gpsService : usa
+guideScreen --> gpsService : usa
+rankingScreen --> gpsService : usa
 
 
 stateManager --> apiService : "usa"
@@ -43,13 +49,11 @@ stateManager --> themeService : "usa"
 stateManager --> localStorage : "usa"
 
 note right of stateManager
-    Todas as Screens acessam o StateManager
-  para leitura e atualização do estado.
+    Todas as Screens acessam o StateManager para leitura e atualização do estado.
 end note
 
-note right of accessibilityService
-    Todas as Screens acessam o accessibilityService
-  para recursos de acessibilidade como TalkBack e VoiceOver.
+note bottom of accessibilityService
+    Todas as Screens acessam o accessibilityService para recursos de acessibilidade como TalkBack e VoiceOver.
 end note
 
 
