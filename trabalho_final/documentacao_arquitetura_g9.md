@@ -3,25 +3,30 @@
 ## 1. Visão Geral do Sistema
 - **Nome do sistema**: Aplicativo de Sustentabilidade Pessoal.
 - **Objetivo**: Ajudar os usuários a adotarem práticas sustentáveis no dia a dia, incentivando hábitos conscientes e responsáveis com o meio ambiente.
-- **Escopo**: O sistema consiste em um aplicativo mobile para dispositivos Android e iOS, que oferece funcionalidades como o envio de notificações diárias com dicas sustentáveis, definição de metas de consumo consciente, configuração de lembretes para ações sustentáveis, localização de pontos de coleta e acesso a um guia interativo sobre o descarte correto de resíduos.
+- **Escopo**: O sistema consiste em um aplicativo mobile multiplataforma (Android e iOS) voltado à promoção de hábitos sustentáveis por meio de recursos interativos e personalizados. Entre suas principais funcionalidades, destacam-se: envio de notificações diárias com dicas práticas de sustentabilidade; definição e acompanhamento de metas de consumo consciente; configuração de lembretes para hábitos sustentáveis; localização de pontos de coleta com base na geolocalização do usuário; e acesso a um guia interativo adaptado às práticas locais de descarte de resíduos. O aplicativo também oferece um sistema de gamificação com recompensas e rankings, integração com e-commerce de produtos sustentáveis, registro de práticas e visualização dos impactos gerados, além de um fórum comunitário para troca de experiência entre os usuários.
 
 ## 2. Requisitos
 
 ### 2.1 Requisitos Funcionais
 
-Para a 1ª iteração do sistema em questão, foram selecionados os seguintes requisitos funcionais:
+Com base nos objetivos e nas necessidades identificadas para o sistema, foram definidos os seguintes requisitos funcionais, os quais especificam de forma detalhada as funcionalidades que deverão ser implementadas para garantir o atendimento às expectativas dos usuários e o cumprimento do escopo proposto:
 
 | ID | Requisito |
 |----|------------|
+| RF01 | O aplicativo deve aplicar técnicas de gamificação para incentivar o engajamento do usuário, oferecendo recompensas e estímulos sempre que atividades sustentáveis forem concluídas com sucesso. |
 | RF02 | O aplicativo deve enviar notificações diárias aos usuários contendo dicas de práticas sustentáveis que possam ser aplicadas no cotidiano. |
 | RF03 | O aplicativo deve permitir que o usuário localize ecopontos, pontos de coleta de eletrônicos e outros locais relacionados à sustentabilidade com base em sua localização geográfica. |
 | RF04 | O aplicativo deve disponibilizar um guia interativo que auxilie o usuário na separação correta de diferentes tipos de resíduos (orgânicos, recicláveis, eletrônicos), adaptado às práticas de descarte da localidade do usuário. Além disso, deve oferecer uma seção, semelhante a um manual, com dicas, ideias de ações e sugestões de práticas sustentáveis que o usuário pode adotar no seu dia a dia. |
+| RF05 | O aplicativo deve disponibilizar um fórum onde os usuários possam compartilhar suas práticas sustentáveis, trocar experiências e interagir com a comunidade. |
+| RF06 | O aplicativo deve permitir a integração com plataformas de e-commerce que vendem produtos sustentáveis, facilitando o acesso dos usuários a esses itens diretamente pelo aplicativo. |
+| RF07 | O aplicativo deve permitir que o usuário visualize sua posição em um ranking de desempenho sustentável, com a opção de filtrar os resultados por país, estado e cidade, incentivando a comparação saudável com outros usuários da mesma região. |
 | RF08 | O aplicativo deve permitir que o usuário defina metas de consumo sustentável e acompanhe seu progresso ao longo do tempo. |
+| RF09 | O aplicativo deve permitir que o usuário registre as práticas sustentáveis realizadas e visualize o impacto gerado, como a quantidade de CO2 economizado (em kg), entre outros indicadores de sustentabilidade. |
 | RF10 | O aplicativo deve permitir que o usuário configure lembretes diários para hábitos sustentáveis que ele deseja adotar de forma rotineira. Esses lembretes serão exibidos como notificações no dispositivo do usuário. |
 
 ### 2.2 Requisitos de Qualidade
 
-Considerando os requisitos funcionais escolhidos no tópico anterior, foram identificados os requisitos de qualidade abaixo:
+A partir dos requisitos funcionais previamente definidos, foram identificados os seguintes requisitos de qualidade, que especificam os atributos não funcionais essenciais para garantir a excelência do sistema:
 
 | ID | Categoria | Requisito |
 |----|-----------|-----------|
@@ -33,7 +38,7 @@ Considerando os requisitos funcionais escolhidos no tópico anterior, foram iden
 | RQ06 | Confiabilidade | O aplicativo deve garantir que nenhuma informação do usuário seja perdida ou corrompida durante atualizações do aplicativo. |
 | RQ07 | Confiabilidade | O aplicativo deve exibir uma mensagem clara quando ocorrer algum erro, como falha de conexão ou problema ao salvar uma meta. |
 | RQ08 | Usabilidade | O aplicativo deve apresentar uma interface intuitiva que permita ao usuário configurar metas de consumo e lembretes em, no máximo, 3 cliques a partir da tela principal. |
-| RQ09 | Usabilidade | As informações no guia interativo e na seção de práticas sustentáveis devem ser apresentadas em linguagem simples e com elementos visuais intuitivos. |
+| RQ09 | Usabilidade | As informações do guia interativo, da seção de práticas  sustentáveis e dos indicadores de impacto ambiental devem ser redigidas em linguagem acessível e clara, evitando termos técnicos, além de serem exibidas por meio de elementos visuais intuitivos. |
 | RQ10 | Usabilidade | O aplicativo deve oferecer exemplos de metas de consumo sustentável, a fim de facilitar a configuração destas por novos usuários. |
 | RQ11 | Usabilidade | Ao sair de uma tela de configuração sem salvar alterações, o aplicativo deve perguntar se o usuário deseja salvá-las ou descartá-las. |
 | RQ12 | Usabilidade | O aplicativo deve se adaptar automaticamente ao tema escuro do sistema operacional, respeitando a preferência do usuário. |
@@ -50,6 +55,19 @@ Considerando os requisitos funcionais escolhidos no tópico anterior, foram iden
 | RQ23 | Integrabilidade | O aplicativo deverá integrar-se com um sistema de monitoramento para que este possa acompanhar continuamente a disponibilidade e o desempenho de todos os componentes da arquitetura. |
 | RQ24 | Portabilidade | Funcionalidades básicas (como visualização de metas e leitura do guia interativo) devem estar acessíveis mesmo sem conexão à Internet, sincronizando os dados automaticamente quando o dispositivo voltar a ficar online. |
 | RQ25 | Usabilidade | Novos usuários devem ser capazes de completar a configuração inicial do aplicativo em até 5 minutos, com tutoriais contextuais. |
+| RQ26 | Segurança | O aplicativo deve implementar mecanismos de moderação automatizados no fórum para evitar a publicação de conteúdo inadequado, spam ou discurso de ódio. |
+| RQ27 | Usabilidade | O fórum deve apresentar recursos como curtidas, respostas em tópicos e categorização por temas para facilitar a navegação e o engajamento dos usuários. |
+| RQ28 | Integrabilidade | O aplicativo deve seguir padrões RESTful e utilizar autenticação segura para se integrar com plataformas de e-commerce de terceiros que oferecem produtos sustentáveis. |
+| RQ29 | Confiabilidade | O sistema de ranking do aplicativo deve ser atualizado a cada 24 horas, garantindo a consistência e fidelidade das informações apresentadas. |
+| RQ30 | Comunicabilidade | O aplicativo deve fornecer feedback visual e sonoro imediato sempre que uma atividade sustentável for concluída ou uma meta de consumo for atingida. |
+| RQ31 | Usabilidade | O aplicativo deve possuir um sistema de pontuação, apresentado com descrições claras sobre como as atividades e metas geram pontos, incluindo critérios de pontuação e o que é necessário para atingir cada nível. |
+| RQ32 | Usabilidade/Comunicabilidade | Ao concluir uma atividade sustentável ou cumprir uma meta de consumo, os pontos obtidos devem ser atualizados automaticamente no sistema de pontuação do aplicativo, refletindo o progresso do usuário no ranking. |
+| RQ33 | Comunicabilidade | A exibição dos indicadores de impacto ambiental deve ocorrer de forma automática e consistente sempre que o usuário concluir uma atividade sustentável ou atingir uma meta, garantindo visibilidade imediata dos resultados gerados para o meio ambiente. |
+| RQ34 | Usabilidade | O aplicativo deve exibir um indicador visual de progresso, como barras de nível, porcentagens ou medalhas, que permitam ao usuário acompanhar sua evolução ao longo das atividades sustentáveis realizadas e metas de consumo alcançadas. |
+| RQ35 | Usabilidade | O aplicativo deve incluir um sistema de conquistas ou medalhas que reconheça automaticamente marcos importantes conquistados pelo usuário. |
+| RQ36 | Usabilidade | O aplicativo deve fornecer desafios temáticos semanais, a fim de estimular a prática sustentável contínua dos usuários. |
+| RQ37 | Usabilidade | O aplicativo deve utilizar recursos de sequência de dias ativos (streaks) e notificações motivacionais, a fim de incentivar o seu uso recorrente pelos usuários. |
+| RQ38 | Acessibilidade | O aplicativo deve seguir as diretrizes definidas pelo WCAG (Web Content Accessibility Guidelines) para acessibilidade. |
 
 ## 3. Arquitetura
 
@@ -84,7 +102,6 @@ Amplia cada container individualmente, apresentando os diversos **componentes (p
 ### Container: Back-End
 
 ![Diagrama de Componentes do Back-End](diagramas/imagens/backend_components.png)
-
 
 ### 3.4 Código
 
