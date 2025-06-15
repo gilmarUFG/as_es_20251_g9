@@ -1,21 +1,21 @@
-@startuml context 
-
+@startuml
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Context.puml
 
 LAYOUT_WITH_LEGEND()
 
 title System Context Diagram for Sustainable Habits Application
 
-Person(user, "Usuário", "Pessoa física que utiliza o aplicativo para gerenciar seus hábitos sustentáveis e acessar informações sobre o assunto.")
+Person(user, "Usuário", "Pessoa física que utiliza o aplicativo para gerenciar seus hábitos sustentáveis e acessar informações.")
 
-System(sustainable_app, "Aplicativo de Hábitos Sustentáveis", "Aplicativo móvel que ajuda os usuários a adotarem práticas sustentáveis.")
+System(sustainable_app, "Aplicativo de Hábitos Sustentáveis", "Aplicativo móvel que ajuda os usuários a adotar práticas sustentáveis, gamificação, fórum e ranking.")
 
-System_Ext(municipal_systems, "Sistemas Municipais", "Sistemas que podem fornecer informações sobre pontos de coleta em determinado município via API.")
-System_Ext(map_apis, "APIs de Mapas", "APIs de terceiros (e.g., Google Maps) para geolocalização e exibição de pontos de coleta.")
+System_Ext(municipal_systems, "Sistemas Municipais", "Sistemas externos que podem fornecer informações sobre pontos de coleta.")
+System_Ext(map_apis, "APIs de Mapas", "APIs de terceiros (e.g., Google Maps) para geolocalização e exibição de pontos.")
 System_Ext(os_notification_service, "Serviço de Notificação do SO", "Serviço do sistema operacional para exibição de notificações.")
 System_Ext(os_theme_settings, "Configurações de Tema do SO", "Configurações do sistema operacional para o tema (modo claro/escuro).")
-System_Ext(screen_readers, "Leitores de Tela", "Softwares de acessibilidade (e.g., TalkBack, VoiceOver) para leitura de conteúdo em voz alta.")
-System_Ext(monitoring_system, "Sistema de Monitoramento (Prometheus + Grafana)", "Sistema externo para acompanhar a disponibilidade e desempenho da aplicação.")
+System_Ext(screen_readers, "Leitores de Tela", "Softwares de acessibilidade (e.g., TalkBack, VoiceOver) para leitura de conteúdo.")
+System_Ext(monitoring_system, "Sistema de Monitoramento (Prometheus/Grafana)", "Sistema externo para acompanhar a disponibilidade e desempenho da aplicação.")
+System_Ext(ecommerce_platforms, "Plataformas de E-commerce de Produtos Sustentáveis (Amazon/Mercado Livre)", "Sistemas externos que vendem produtos sustentáveis.")
 
 Rel(user, sustainable_app, "Define metas de consumo sustentável e acompanha progresso", "RF08")
 Rel(user, sustainable_app, "Configura lembretes diários para hábitos sustentáveis", "RF10")
@@ -23,12 +23,19 @@ Rel(user, sustainable_app, "Recebe notificações diárias com dicas de prática
 Rel(user, sustainable_app, "Localiza ecopontos e outros locais de sustentabilidade", "RF03")
 Rel(user, sustainable_app, "Acessa guia interativo de separação de resíduos", "RF04")
 Rel(user, sustainable_app, "Acessa seção de dicas e ideias de ações sustentáveis", "RF04")
+Rel(user, sustainable_app, "Engaja com gamificação e recebe recompensas", "RF01")
+Rel(user, sustainable_app, "Interage no fórum da comunidade", "RF05")
+Rel(user, sustainable_app, "Visualiza ranking de desempenho sustentável", "RF07")
+Rel(user, sustainable_app, "Registra práticas e visualiza impacto ambiental", "RF09")
+Rel(user, sustainable_app, "Acessa produtos sustentáveis", "RF06")
 
-Rel(sustainable_app, municipal_systems, "Integra-se com", "Integrability")
-Rel(sustainable_app, map_apis, "Consome dados de", "Integrability")
-Rel(sustainable_app, os_notification_service, "Envia notificações para o usuário", "RF02, RF10")
-Rel(sustainable_app, os_theme_settings, "Adapta-se automaticamente ao tema do dispositivo", "Usability")
-Rel(sustainable_app, screen_readers, "Compatível com", "Accessibility")
-Rel(monitoring_system, sustainable_app, "Coleta métricas de disponibilidade e desempenho", "Integrability")
+
+Rel(sustainable_app, municipal_systems, "Integra com", "Integrabilidade")
+Rel(sustainable_app, map_apis, "Utiliza para geolocalização e exibição de pontos", "Integrabilidade")
+Rel(sustainable_app, os_notification_service, "Envia notificações para o usuário", "RF02, RF10, Usabilidade")
+Rel(sustainable_app, os_theme_settings, "Adapta-se automaticamente ao tema escuro", "Usabilidade")
+Rel(sustainable_app, screen_readers, "Compatível com para acessibilidade", "Acessibilidade")
+Rel(monitoring_system, sustainable_app, "Coleta métricas de disponibilidade e desempenho", "Disponibilidade")
+Rel(sustainable_app, ecommerce_platforms, "Integra com para exibir produtos", "RF06, Integrabilidade")
 
 @enduml
