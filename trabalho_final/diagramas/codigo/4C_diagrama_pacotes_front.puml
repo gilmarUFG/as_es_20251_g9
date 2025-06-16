@@ -1,4 +1,5 @@
-@startuml frontend_package_diagram
+@startuml frontend_package
+
 !theme C4_blue from https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/themes
 !include https://raw.githubusercontent.com/plantuml-stdlib/C4-PlantUML/master/C4_Component.puml
 
@@ -51,7 +52,7 @@ stateManager --> apiService : "usa"
 stateManager --> themeService : "usa"
 stateManager --> localStorage : "usa"
 
-note left of stateManager
+note top of stateManager
     Todas as Screens acessam o StateManager para leitura e atualização do estado.
 end note
 
