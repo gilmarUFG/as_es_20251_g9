@@ -20,16 +20,26 @@ Container_Boundary(backend, "Backend API"){
     Component(goalsController, "GoalsController", "MVC REST controller", "Rotas relacionadas às metas do usuário")
     Component(notificationController, "NotificationController", "MVC REST controller", "Rotas relacionadas às notificações")
     Component(locationsController, "LocationsController", "MVC REST controller", "Rotas relacionadas à localização de ecopontos")
+    Component(rankingController, "RankingController", "MVC REST Controller", "Rotas relacionadas ao ranking de sustentabilidade")
+    Component(forumController, "ForumController", "MVC REST Controller", "Rotas relacionadas ao fórum comunitário")
+    Component(ecommerceController, "EcommerceController", "MVC REST Controller", "Rotas relacionadas aos produtos sustentáveis")
+    Component(sustainablePracticeController, "SustainablePracticeController", "MVC REST Controller", "Rotas relacionadas ao registro de práticas sustentáveis realizadas")
+
 
     Component(userService, "UserComponent", "Application service", "Registrar e retornar dados do(s) usuário(s)")
     Component(goalsService, "GoalsComponent", "Application service", "Registrar e ler dados de metas definidas pelo usuário")
     Component(notificationService, "NotificationComponent", "Application service", "Registrar token do aparelho e realizar chamadas ao PNS")
     Component(locationsService, "LocationsComponent", "Application service", "Buscar dados de localizações de ecopontos")
+    Component(rankingService, "RankingComponent", "Application Service", "Registrar e ler dados de ranking")
+    Component(forumService, "ForumComponent", "Application Service", "Registrar e ler mensagens do fórum")
+    Component(ecommerceService, "EcommerceComponent", "Application Service", "Busca dados das plataformas de e-commerce")
+    Component(sustainablePracticeService, "SustainablePracticeComponent", "MVC REST Controller", "Registrar e ler práticas sustentáveis realizadas; realizar cálculos de impacto")
 }
 
 System_Ext(pns, "Sistema de envio de notificações", "FCM ou APNs")
 System_Ext(municipalSystems, "APIs de Sistemas Municipais", "Serviços públicos que fornecem informações sobre ecopontos via API")
 System_Ext(mapApis, "APIs de Mapas", "APIs externas usadas para exibição e localização dos pontos de coleta")
+System_Ext(ecommerceExt, "Plataformas de e-commerce de produtos sustentáveis", "Sistemas externos que vendem produtos sustentáveis")
 
 ContainerDb(db, "Banco de dados", "MongoDB", "Armazena as coleções de dados necessárias para o sistema", $sprite="mongodb")
 
@@ -37,20 +47,34 @@ Rel(mobile, userController, "Realiza chamadas a", "JSON/HTTPS")
 Rel(mobile, goalsController, "Realiza chamadas a", "JSON/HTTPS")
 Rel(mobile, notificationController, "Realiza chamadas a", "JSON/HTTPS")
 Rel(mobile, locationsController, "Realiza chamadas a", "JSON/HTTPS")
+Rel(mobile, rankingController, "Realiza chamadas a", "JSON/HTTPS")
+Rel(mobile, forumController, "Realiza chamadas a", "JSON/HTTPS")
+Rel(mobile, ecommerceController, "Realiza chamadas a", "JSON/HTTPS")
+Rel(mobile, sustainablePracticeController, "Realiza chamadas a", "JSON/HTTPS")
 
 Rel(userController, userService, "Consome")
 Rel(goalsController, goalsService, "Consome")
 Rel(notificationController, notificationService, "Consome")
 Rel(locationsController, locationsService, "Consome")
+Rel(rankingController, rankingService, "Consome")
+Rel(forumController, forumService, "Consome")
+Rel(ecommerceController, ecommerceService, "Consome")
+Rel(sustainablePracticeController, sustainablePracticeService, "Consome")
 
 Rel(userService, db, "Lê e escreve dados", "Driver MongoDB")
 Rel(goalsService, db, "Lê e escreve dados", "Driver MongoDB")
 Rel(notificationService, db, "Lê e escreve dados", "Driver MongoDB")
 Rel(locationsService, db, "Lê e escreve dados", "Driver MongoDB")
+Rel(rankingService, db, "Lê e escreve dados", "Driver MongoDB")
+Rel(forumService, db, "Lê e escreve dados", "Driver MongoDB")
+Rel(ecommerceService, db, "Lê e escreve dados", "Driver MongoDB")
+Rel(sustainablePracticeService, db, "Lê e escreve dados", "Driver MongoDB")
+
 
 Rel(notificationService, pns, "Envia requisições a")
-Rel(pns, mobile, "envia notificações")
+Rel(pns, mobile, "Envia notificações")
 Rel(locationsService, municipalSystems, "Envia requisições a", "JSON/HTTPS")
 Rel(locationsService, mapApis, "Envia requisições a", "JSON/HTTPS")
+Rel(ecommerceService, ecommerceExt, "Redireciona a", "HTTPS")
 
 @enduml
