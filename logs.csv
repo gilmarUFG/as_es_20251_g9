@@ -1,0 +1,453 @@
+commit fbd4bdafd2b5826f46dee044ce0cdfe09511a238
+Author: Gilmar Ferreira Arantes <gilmar.arantes@ufg.br>
+Date:   Mon Jun 30 10:20:13 2025 -0300
+
+    update repository
+
+commit cae965937a25268be4fb5e0995301e0425f0bb74
+Author: Gilmar Ferreira Arantes <gilmar.arantes@ufg.br>
+Date:   Wed Jun 25 20:14:40 2025 -0300
+
+    corrigindo atividades
+
+commit 0da7e82e89860963ca31d6411e8f84204151ebd5
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Tue Jun 24 19:31:43 2025 -0300
+
+    Added presentation
+
+commit 97b203c40a57380e9f81b55194811ad1524e7cbf
+Author: Giovanna Lyssa Rodrigues Borges Teles <giovannalyssa@discente.ufg.br>
+Date:   Mon Jun 16 20:46:43 2025 -0300
+
+    Updated backend package diagram
+
+commit 28da39a9764011b1da773de59f3b4837d3b4a11e
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon Jun 16 17:23:03 2025 -0300
+
+    Just corrected the note's position at package diagram
+
+commit 93d8d479aa0319689f3dcab9800d9e49a0279c57
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon Jun 16 15:52:51 2025 -0300
+
+    Replaced backend components diagram image
+
+commit 5c05cce64ec90c5bf0f6a595f9c00e4430c452d6
+Author: jhovitor1998 <132622534+jhovitor1998@users.noreply.github.com>
+Date:   Mon Jun 16 12:53:32 2025 -0300
+
+    Adjustments
+
+commit afd7a7ec73d63e27204f657804b9150581d2be7f
+Author: jhovitor1998 <132622534+jhovitor1998@users.noreply.github.com>
+Date:   Mon Jun 16 12:48:34 2025 -0300
+
+    Update 4C_diagrama_pacotes_front.puml
+    
+    organização das linhas de conexões
+
+commit 55e4159d66a5c09a1748b7dde49dfad1efcd02f8
+Author: gusneves <gustavonpl@protonmail.com>
+Date:   Mon Jun 16 08:52:42 2025 -0300
+
+    Updated backend components diagram
+
+commit ac58739eb7bebedf165c821a8e08c97a17cb8762
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun Jun 15 20:38:20 2025 -0300
+
+    Updated frontend components diagram and added new screens in the package diagram
+
+commit fa9fd94d5186b4fba4e791d769d7c1781a49fc94
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun Jun 15 18:35:47 2025 -0300
+
+    Adjustments
+
+commit ac4059fa2d7c994fde9dbf0ed63220621c81782a
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Sun Jun 15 17:17:58 2025 -0300
+
+    Delete trabalho_final/diagramas/imagens/container.png
+
+commit 5b2d8dbe7e5b6ac73f808073bb230f0651299ce1
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Sun Jun 15 17:17:18 2025 -0300
+
+    ContainerDiagram
+    
+    Diagrama de containers atualizado com 5 outros requisitos, referente a segunda parte do trabalho de arquitetura.
+
+commit 5be8413b77f1e74ecb45454c452ce444038b1fb4
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Sun Jun 15 17:15:40 2025 -0300
+
+    Delete trabalho_final/diagramas/imagens/context.png
+
+commit a9030fb32bb841ebbd1834495e7889267c000fe9
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Sun Jun 15 17:14:05 2025 -0300
+
+    Diagrama de contexto atualizado
+    
+    Diagrama de contexto atualizado com 5 outros requisitos. Essa sendo a segunda parte do trabalho
+
+commit 4fa04b6dd9a5c13b2d81eb34abd9efbb978a1940
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Sun Jun 15 17:08:27 2025 -0300
+
+    Update 4C_diagrama_contexto.puml
+    
+    Adição de novos requisitos, segunda parte do trabalho
+
+commit 08f1989755c9b6b89ee810a3164eb8f8be6cff27
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Sun Jun 15 17:07:39 2025 -0300
+
+    Update 4C_diagrama_container.puml
+    
+    Adição de novos requisitos, segunda parte do trabalho
+
+commit d704bd7ffb827a9750e403ef67e6a4b49379875a
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun Jun 15 12:16:17 2025 -0300
+
+    Added new functional and quality requirements
+
+commit 7874cce41cae18b1c040dbffeb70ee3e4966c394
+Merge: 14095c2 7b08be2
+Author: Gilmar Ferreira Arantes <gilmar.arantes@ufg.br>
+Date:   Mon May 26 19:13:40 2025 -0300
+
+    Merge branch 'main' into estudante
+
+commit 7b08be2415fc638f58a07ba261410b753b166d9f
+Author: Gilmar Ferreira Arantes <gilmar.arantes@ufg.br>
+Date:   Mon May 26 19:10:03 2025 -0300
+
+    update repository
+
+commit 14095c2967ee9274f4e1a90a08380b5c45c9cf7b
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon May 26 18:41:21 2025 -0300
+
+    Added external systems relationship
+
+commit 93ea6b86565457ab23cc4593a325a1e3626aed25
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon May 26 11:59:01 2025 -0300
+
+    Correcting mistake
+
+commit 5a97c907276178e884c3c955cba7da0027b69319
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon May 26 10:54:55 2025 -0300
+
+    Rnamed file 2
+
+commit 016b3f9c9d0562113df27344f03daa3a58679dfe
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon May 26 10:54:29 2025 -0300
+
+    Renamed file
+
+commit 900f168dae61e2f888194ff59cb3d948a5cda223
+Author: jhovitor1998 <132622534+jhovitor1998@users.noreply.github.com>
+Date:   Mon May 26 10:43:00 2025 -0300
+
+    Frontend Package
+
+commit 1ccb3297d25b955f2b508d94e92eb557bb390107
+Author: jhovitor1998 <132622534+jhovitor1998@users.noreply.github.com>
+Date:   Mon May 26 10:40:03 2025 -0300
+
+    Rename diagrama_pacotes_front.png to frontend_package.png
+
+commit 809bbad1876fe5745367c7dbdb8b16b5ce5a88c8
+Author: jhovitor1998 <132622534+jhovitor1998@users.noreply.github.com>
+Date:   Mon May 26 10:33:57 2025 -0300
+
+    Codigo diagrama de pacotes front
+
+commit 7bc9d3041e37bc4c1c6f0c7641870c4cc6d333e9
+Author: jhovitor1998 <132622534+jhovitor1998@users.noreply.github.com>
+Date:   Mon May 26 10:28:34 2025 -0300
+
+    Diagrama de pacotes - front
+
+commit 4076516bc7c801845a0671f894c0562e9d359dd1
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon May 26 10:25:14 2025 -0300
+
+    Updated documentation and added notes to the frontend component diagram
+
+commit 10866e5b87884eb8dc92c6903c54c7784693b131
+Author: Giovanna Lyssa Rodrigues Borges Teles <88949325+GiovannaLyssa99@users.noreply.github.com>
+Date:   Sun May 25 23:12:01 2025 -0300
+
+    Updated documentation
+
+commit c32d9b699ab02fa677ce18c9e03bb26a0a799bdd
+Author: Giovanna Lyssa Rodrigues Borges Teles <88949325+GiovannaLyssa99@users.noreply.github.com>
+Date:   Sun May 25 23:07:35 2025 -0300
+
+    Added new diagram
+
+commit 0e1846177be72552ac42bc013fbfa14eee2870f8
+Author: Giovanna Lyssa Rodrigues Borges Teles <88949325+GiovannaLyssa99@users.noreply.github.com>
+Date:   Sun May 25 23:06:52 2025 -0300
+
+    Added new diagram
+
+commit 5469c3d10d3545327464113bf1e88bfd857b5e75
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun May 25 13:03:25 2025 -0300
+
+    Changed images and updated documentation
+
+commit b6a4a499cdaa1d11e812d7f8768c70057212c3d4
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun May 25 12:31:41 2025 -0300
+
+    Added extension
+
+commit 5caec877c5e3fb5558414e633f8940aa430ca440
+Author: gusneves <gustavonpl@protonmail.com>
+Date:   Sun May 25 12:10:14 2025 -0300
+
+    Added backend component diagram
+
+commit 787c95d2bcf67e1e1ff16acb908b5c08ff662174
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Fri May 23 15:43:42 2025 -0300
+
+    Added chosen architectural style
+
+commit 21b6fbb492dd0b1eaf26fbfabab0b072447ed49b
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Fri May 23 12:19:24 2025 -0300
+
+    Added frontend component diagram image and updated documentation
+
+commit 8bbf1b146b01b29f6475c8ae980147662afde553
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Fri May 23 11:55:25 2025 -0300
+
+    Code for frontend component diagram
+
+commit 383e50a0e63ac5004417a384fae9148a58acd179
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 22:16:54 2025 -0300
+
+    Added context and container diagram to documentation
+
+commit 03942f36f12ac4648318e75922f4996c46b30848
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 21:52:34 2025 -0300
+
+    Context and container diagram images
+
+commit 2d65569d7988f42c3d857627942ba14339a44a48
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 21:50:56 2025 -0300
+
+    Few corrections part 2
+
+commit b6bbb107d88666c3d50da9162ca1ab3226e88bdb
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 20:58:47 2025 -0300
+
+    Few Corrections part 1
+
+commit 20d9a7fe8df20a2451a59f451c5ce0065b2a9d2d
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 18:24:44 2025 -0300
+
+    Corrections
+
+commit 820a864fdaba6693c5fa0067e001ac20ccb040f9
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 17:48:53 2025 -0300
+
+    More corrections
+
+commit a19f4b0a26876f0b3c6c5c8e30c90106c6893be3
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 17:44:13 2025 -0300
+
+    Changed directory and corrections
+
+commit 610b0f08b751389af86c485e3c6671677c574f1d
+Merge: 23107d7 88b1118
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 16:56:43 2025 -0300
+
+    Merge branch 'estudante' of github.com:gilmarUFG/as_es_20251_g9 into estudante
+
+commit 23107d7ac126fccef8e23df53d032ecccd6ea346
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu May 22 16:56:22 2025 -0300
+
+    Added first version of architecture documentation
+
+commit 88b11180f96067d175cb4f280627ac3ea52f4347
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Thu May 22 16:53:55 2025 -0300
+
+    Create 4C_diagrama_Contexto
+    
+    Documentação da arquitetura do software por meio do modelo 4C, no caso, o diagrama de contexto desse.
+
+commit 30d90a73ed7089dcca3d357cb725ce70f8edf85d
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Thu May 22 16:52:32 2025 -0300
+
+    Rename 4C_diagrama_contexto to 4C_diagrama_container
+
+commit 9d3626da45b2ec0e48da71f18628dc6af0d49900
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Thu May 22 16:51:07 2025 -0300
+
+    Create 4C_diagrama_contexto
+    
+    Documentação da arquitetura do software pelo modelo 4C, no caso, o diagrama de contexto.
+
+commit 251064279d64d98c632484b8285b4c297b9bdd56
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun May 11 20:05:32 2025 -0300
+
+    Adicionado infografico
+
+commit c6a2c53f06a18ba52b863a61e6b6e387f865df32
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun May 4 20:38:17 2025 -0300
+
+    Divided requirements for each iteration
+
+commit 8fd9195bce47647eab8136cdf418239d7d6d144c
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun May 4 20:15:05 2025 -0300
+
+    Added all requirements
+
+commit 3de06cee2f62b3ba2d2c1c296f75078c4559fe91
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Wed Apr 30 17:54:33 2025 -0300
+
+    Created definicao_trabalho_final_g9.md
+
+commit f45e4d244c20120303be3c7d6d11de378788d73a
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun Apr 27 21:23:04 2025 -0300
+
+    Added updated presentation
+
+commit 976ec7e94862113a4b0b9aaab30a8eab6dd9b8af
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Sun Apr 27 21:22:31 2025 -0300
+
+    Deleted old presentation
+
+commit d6d73e75341a95c97cc7389ed6067893366bfbae
+Author: HalleffySantos <78797938+HalleffySantos@users.noreply.github.com>
+Date:   Sun Apr 27 19:06:41 2025 -0300
+
+    Add files via upload
+
+commit 101441ba29ba2e219df2b473a6e21470b639ea7f
+Author: Gilmar Ferreira Arantes <gilmar.arantes@ufg.br>
+Date:   Sat Apr 19 12:50:28 2025 -0300
+
+    update repository
+
+commit 0d6bbc97b768d152678ecf34cca008685126a9f5
+Merge: d1ecaae d262fb3
+Author: Gilmar Ferreira Arantes <gilmar.arantes@ufg.br>
+Date:   Thu Mar 27 20:58:32 2025 -0300
+
+    Merge branch 'estudante'
+
+commit d262fb37de306f852868e497105087a63b84f442
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon Mar 24 22:27:05 2025 -0300
+
+    Adicionado novo requisito de qualidade
+
+commit 5867bf137a834d5e3cf46ebfc53c75bd47cdfa4e
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon Mar 24 21:20:27 2025 -0300
+
+    Updated ap2_Grupo9.md
+
+commit 8587b985c46ba5ff93fc2dd99640618269137b0c
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon Mar 24 21:15:19 2025 -0300
+
+    Updated ap2_Grupo9.md
+
+commit b32dc07845a52cd006601ef836a1f448c23ddadf
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon Mar 24 21:13:33 2025 -0300
+
+    Adicionado novos requisitos de qualidade
+
+commit 762fbdc83039d4359a2ce85946d4fa87956bf4f6
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Mon Mar 24 20:59:14 2025 -0300
+
+    Updated ap2_Grupo9.md
+
+commit d1ecaae0ce5a029242e0773619a5bb775e33d109
+Merge: 0acd7a8 f9db6c7
+Author: Gilmar Ferreira Arantes <130784207+gilmarUFG@users.noreply.github.com>
+Date:   Fri Mar 21 19:09:06 2025 -0300
+
+    Merge pull request #1 from gilmarUFG/estudante
+    
+    Estudante
+
+commit f9db6c7f7ded4a89efe817f570dfe6ecc6c62dd6
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu Mar 20 14:22:49 2025 -0300
+
+    Updated ap2_Grupo9.md
+
+commit f25cfb4a3016d872c236b3061f2124b9e6dfc59d
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu Mar 20 14:18:27 2025 -0300
+
+    Deletando PDF da AP2
+    
+    O conteúdo do PDF foi transferido para o 'ap2_Grupo9.md' para ficar melhor de visualizar.
+
+commit 78dbcb1f6ecbaa37ec32e99ed8bc627d179a58ad
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu Mar 20 14:10:39 2025 -0300
+
+    Updated ap2_Grupo9.md
+
+commit 9e23b490e8bbaf26ed1e2818a0dea4468fe0d18f
+Author: Maria Eduarda <87625092+maririchii@users.noreply.github.com>
+Date:   Thu Mar 20 14:05:50 2025 -0300
+
+    Adicionada AP2 do PDF no formato Markdown
+
+commit 715ba106147ffd73015145065cc0623b6cc94602
+Author: Gustavo Neves <56834874+gusneves@users.noreply.github.com>
+Date:   Mon Mar 17 21:21:21 2025 -0300
+
+    atividade 02
+
+commit 0acd7a899f8b8eb005ecb88fcd15432c16d643a1
+Author: Gilmar Ferreira Arantes <gilmar.arantes@ufg.br>
+Date:   Fri Feb 28 16:58:56 2025 -0300
+
+    Update README.md file.
+
+commit aa8b4880e679a898596097d88c14d2fbcab7d7fe
+Author: Gilmar Ferreira Arantes <130784207+gilmarUFG@users.noreply.github.com>
+Date:   Fri Feb 28 14:40:22 2025 -0300
+
+    Initial commit
